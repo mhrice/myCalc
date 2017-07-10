@@ -8,10 +8,13 @@ import {
 
 export default class CButton extends React.Component {
 
+
 onButtonPress = () =>{
 
   this.props.onChange(this.props.number);
 }
+
+
 
 render(){
   return(
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
 
  },
 button:{
-backgroundColor: '#f49242',
+backgroundColor: '#32c937',
 padding: 30,
 
 

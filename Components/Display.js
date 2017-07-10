@@ -12,12 +12,16 @@ state = {
 }
 
 
-
+changeName = (text) =>{
+  return (text.includes('*'))?text.replace("*", "X") : text;
+}
 
   render(){
+    var {text}= this.props;
+    textStr = String(text);
     return(
       <View style = {styles.textContainer}>
-      <Text style = {styles.text}> {this.props.text}</Text>
+      <Text style = {styles.text}> {this.changeName(textStr)}</Text>
       </View>
 
     );
@@ -28,10 +32,12 @@ state = {
 textContainer:{
   flex: 1,
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  padding: 10,
+
 },
 text:{
-  fontSize: 30
+  fontSize: 50
 
 }
 

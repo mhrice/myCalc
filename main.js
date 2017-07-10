@@ -21,7 +21,6 @@ state = {
 changeName = (x) =>{
 
 if(x=="X"){
-
   this.setState({
     number: this.state.number+'*'
   })
